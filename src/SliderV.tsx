@@ -10,7 +10,16 @@ export type SliderVProps = {
   classPrefix?: string;
   placement?: 'top' | 'bottom' | 'left' | 'right';
   shape?: 'dot' | 'bar';
-  style?: any;
+  style?: {
+    width: any;
+    Color: any;
+    overflow: any;
+    borderRadius: any;
+    margin: any;
+    boxShadow: any;
+    transition: any;
+    position: any;
+  };
   className: string;
 };
 const mystyle: any = {
