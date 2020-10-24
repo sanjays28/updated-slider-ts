@@ -46,7 +46,7 @@ const mystyle: any = {
   heading: {
     position: 'relative',
     zIndex: '1',
-    color: '#F0FFFF',
+    color: '#000000',
     top: '150px',
     paddingLeft: '50px',
     textShadow: '#0002d 2px 0px 10px',
@@ -70,56 +70,37 @@ const mystyle: any = {
     left: '145px',
   },
 };
-const output: any = [];
-const sliderData: any[] = [
-  {
-    heading: 'Vlinder',
-    subHeading: 'vlinder | blockchain agnostic platform ',
-    img: 'https://i.ibb.co/BGgV6vr/Layer-2.png',
-    btn: 'Sign up!',
-  },
-  {
-    heading: 'Sanjay',
-    subHeading: 'vlinder | blockchain agnostic platform ',
-    img: 'https://i.ibb.co/BGgV6vr/Layer-2.png',
-    btn: 'Register!',
-  },
-  {
-    heading: 'Application ',
-    subHeading: 'vlinder | blockchain agnostic platform ',
-    img: 'https://i.ibb.co/BGgV6vr/Layer-2.png',
-    btn: 'Register!',
-  },
-];
-
-const getSlider = () => {
-  // eslint-disable-next-line no-unused-expressions
-  Array.isArray(sliderData) &&
-    sliderData.forEach(items => {
-      output.push(
-        <div>
-          <div style={mystyle.div3}>
-            <img alt="1 " src={items.img} style={mystyle.img}></img>
-            <h1 className="heading" style={mystyle.heading}>
-              {items.heading} <br></br>
-              <h6
-                className="sub-heading"
-                style={{paddingLeft: '25px', paddingTop: '30px'}}
-              >
-                {items.subHeading}
-              </h6>
-              <br></br>
-              <Button style={mystyle.btn}>Sign Up</Button>
-              <br></br>
-            </h1>
-          </div>
-        </div>,
-      );
-    });
-  return output;
-};
 
 export const SliderV = (props: SliderVProps) => {
+  const output: any = [];
+
+  const getSlider = () => {
+    // eslint-disable-next-line no-unused-expressions
+    Array.isArray(props.sliderData) &&
+      props.sliderData.forEach(items => {
+        output.push(
+          <div style={{backgroundColor: 'white'}}>
+            <div style={mystyle.div3}>
+              <img alt="1 " src={items.img} style={mystyle.img}></img>
+              <h1 className="heading" style={mystyle.heading}>
+                {items.heading} <br></br>
+                <h6
+                  className="sub-heading"
+                  style={{paddingLeft: '25px', paddingTop: '30px'}}
+                >
+                  {items.subHeading}
+                </h6>
+                <br></br>
+                <Button style={mystyle.btn}>Sign Up</Button>
+                <br></br>
+              </h1>
+            </div>
+          </div>,
+        );
+      });
+    return output;
+  };
+
   const _sliderProps = {...props};
   return <Carousel {..._sliderProps}>{getSlider()}</Carousel>;
 };
