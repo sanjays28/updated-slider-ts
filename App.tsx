@@ -23,30 +23,35 @@ const sliderData: any[] = [
   },
 ];
 
-const TypeA: any = {
-  width: '60vw',
-  Color: 'White',
-  overflow: 'hidden',
-  borderRadius: '5px',
-  margin: '2rem auto',
-  boxShadow: ' 0 5px 10px ',
-  transition: 'width 2s',
-  position: 'relative',
-};
-
-const TypeB: any = {
-  width: '100vw',
-  Color: 'red',
-  overflow: 'hidden',
-  borderRadius: '20px',
-  margin: '2rem auto',
-
-  transition: 'width 2s',
-  position: 'relative',
+const SliderType: any = {
+  TypeA: {
+    width: '60vw',
+    Color: 'White',
+    overflow: 'hidden',
+    borderRadius: '5px',
+    margin: '2rem auto',
+    boxShadow: ' 0 5px 10px ',
+    transition: 'width 2s',
+    position: 'relative',
+  },
+  TypeB: {
+    width: '100vw',
+    Color: 'red',
+    overflow: 'hidden',
+    borderRadius: '20px',
+    margin: '2rem auto',
+    transition: 'width 2s',
+    position: 'relative',
+  },
 };
 
 const backGround: any = {
-  backgroundImage: 'linear-gradient(to right, #89f7fe, #66a6ff',
+  bg1: {
+    backgroundImage: 'linear-gradient(to right, #89f7fe, #66a6ff',
+  },
+  bg2: {
+    backgroundImage: 'linear-gradient(to right, #80d0c7 ,#13547a',
+  },
 };
 const imgType: any = {
   Round: {
@@ -76,10 +81,10 @@ const Slider = () => {
     <div>
       <SliderV
         sliderData={sliderData}
-        backGround={backGround}
+        backGround={backGround.bg2}
         imgType={imgType.Round}
         className="custom-slider"
-        style={TypeA}
+        style={SliderType.TypeA}
         shape="bar"
         placement="bottom"
         autoplay
