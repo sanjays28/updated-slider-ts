@@ -4,6 +4,10 @@ import 'rsuite/dist/styles/rsuite-default.css';
 
 export type SliderVProps = {
   sliderData?: any[];
+  headingFont?: any;
+  imgType?: any;
+  backGround?: any;
+  TypeA?: any[];
   autoplay?: boolean;
   autoplayInterval?: number;
   children?: any;
@@ -23,30 +27,10 @@ export type SliderVProps = {
   className: string;
 };
 const mystyle: any = {
-  slider: {
-    width: '100vw',
-    Color: 'White',
-    overflow: 'hidden',
-    borderRadius: '5px',
-    margin: '2rem auto',
-    boxShadow: ' 0 5px 10px ',
-    transition: 'width 2s',
-    position: 'relative',
-  },
-
-  img: {
-    position: 'absolute',
-    left: '650px',
-    top: '25px',
-    zIndex: '1',
-    float: 'right',
-    height: '350px',
-    padding: '5px',
-  },
   heading: {
     position: 'relative',
     zIndex: '1',
-    color: '#000000',
+    color: '#483D8B',
     top: '150px',
     paddingLeft: '50px',
     textShadow: '#0002d 2px 0px 10px',
@@ -79,9 +63,9 @@ export const SliderV = (props: SliderVProps) => {
     Array.isArray(props.sliderData) &&
       props.sliderData.forEach(items => {
         output.push(
-          <div style={{backgroundColor: 'white'}}>
+          <div style={props.backGround}>
             <div style={mystyle.div3}>
-              <img alt="1 " src={items.img} style={mystyle.img}></img>
+              <img alt="1 " src={items.img} style={props.imgType}></img>
               <h1 className="heading" style={mystyle.heading}>
                 {items.heading} <br></br>
                 <h6
