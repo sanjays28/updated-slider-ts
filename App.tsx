@@ -43,6 +43,15 @@ const SliderType: any = {
     transition: 'width 2s',
     position: 'relative',
   },
+  TypeC: {
+    width: '100vw',
+    Color: 'green',
+    overflow: 'hidden',
+    borderRadius: '50px',
+    margin: '5rem auto',
+    transition: 'width 5s',
+    position: 'relative',
+  },
 };
 
 const backGround: any = {
