@@ -44,11 +44,11 @@ const SliderType: any = {
     position: 'relative',
   },
   TypeC: {
-    width: '100vw',
+    width: '60vw',
     Color: 'green',
     overflow: 'hidden',
     borderRadius: '50px',
-    margin: '5rem auto',
+    margin: '2rem auto',
     transition: 'width 5s',
     position: 'relative',
   },
@@ -93,7 +93,7 @@ const Slider = () => {
         backGround={backGround.bg2}
         imgType={imgType.Round}
         className="custom-slider"
-        style={SliderType.TypeA}
+        style={SliderType.TypeC}
         shape="bar"
         placement="bottom"
         autoplay
