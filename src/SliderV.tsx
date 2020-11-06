@@ -48,7 +48,7 @@ const mystyle: any = {
     zIndex: '1',
     paddingLeft: '10px',
     textAlign: 'center',
-    // backgroundImage:"linear-gradient(to right, #4776E6 0%, #8E54E9  51%, #4776E6  100%)",
+    
     backgroundImage: 'linear-gradient(to right, #4e54c8, #8f94fb',
     color: 'white',
     left: '145px',
